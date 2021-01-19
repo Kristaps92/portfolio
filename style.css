@@ -1,3 +1,92 @@
-h1 {
-    color: limegreen;
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Lobster&family=Ubuntu:wght@700&display=swap');
+
+/*
+    font-family: 'Hachi Maru Pop', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Ubuntu', sans-serif;
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 15px 0;
+    font-family: 'Ubuntu', sans-serif ;
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    color:#fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span{
+    color: lime;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a{
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.4s ease;
+}
+
+.navbar .menu li a:hover{
+    color: lime;
+}
+
+.home {
+    display: flex;
+    background: url("images/home.jpg") no-repeat center;
+    height: 100vh;
+    color: #000;
+    min-height: 500px;
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1{
+    font-size: 27px;
+}
+
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span{
+    color: lime;
+    font-weight: 500;
 }
