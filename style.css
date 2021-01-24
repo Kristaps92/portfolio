@@ -18,9 +18,12 @@
     margin: auto;
 }
 
+/*Navigation bar----------------------------------------------------------------*/
+
 .navbar{
     position: fixed;
     width: 100%;
+    z-index: 999;
     padding: 15px 0;
     font-family: 'Ubuntu', sans-serif ;
     transition: all 1s ease;
@@ -28,8 +31,9 @@
 
 .navbar.sticky{
     padding: 15px 0;
-    background: lime;
-    opacity: 0.5;
+    background: rgba(5, 245, 77, 0.5);
+    
+    
 }
 
 .navbar .max-width{
@@ -46,6 +50,11 @@
 
 .navbar .logo a span{
     color: lime;
+    transition: all 1s ease;
+}
+
+.navbar.sticky .logo a span {
+    color: #000;
 }
 
 .navbar .menu li{
@@ -61,9 +70,18 @@
     transition: color 0.4s ease;
 }
 
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
 .navbar .menu li a:hover{
     color: lime;
 }
+
+/*Home section----------------------------------------------------------*/
 
 .home {
     display: flex;
@@ -96,4 +114,223 @@
 .home .home-content .text-3 span{
     color: lime;
     font-weight: 500;
+}
+
+.home .home-content a{
+    display: inline-block;
+    background: lime;
+    color: #000;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 2px solid lime;
+    transition: all 1s ease;
+}
+
+.home .home-content a:hover{
+    color: lime;
+    background: none;
+}
+
+/*About section------------------------------------------------------------------------*/
+
+section{
+    padding: 100px 0;
+}
+
+.about{
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
+.about .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
+.about .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 230px;
+    height: 3px;
+    background: #222;
+    transform: translateX(-50%);
+}
+
+.about .title::after{
+    content: "Who i am";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: lime;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.about .about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about .about-content .right{
+    width: 55%;
+}
+
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right .text span{
+    color: lime;
+}
+
+.about .about-content .right p{
+    text-align: justify;
+}
+
+.about .about-content .right a{
+display: inline-block;
+background: lime;
+color: #fff;
+font-size: 20px;
+font-weight: 500;
+padding: 10px 30px;
+margin-top: 20px;
+border-radius: 10px;
+border: 2px solid lime;
+transition: all 1s ease;
+}
+
+.about .about-content .right a:hover{
+    color: lime;
+    background: none;
+}
+
+.about .about-content .column{
+    width: 50%;
+}
+
+
+/*Responsive media-----------------------------------------------------------*/
+
+@media (max-width: 1300px) {
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width{
+    padding: 0 50px;
+    }
+}
+
+@media (max-width: 947px) {
+    .max-width{
+        padding: 0 50px;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #222;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 1s ease;
+    }
+    .navbar .menu.active{
+        left: -0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+}
+
+@media (max-width: 820px) {
+    .about .about-content .column{
+        width: 100%;
+    }
+
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .about-content .right{
+        flex: 100%;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
 }
