@@ -23,6 +23,13 @@
     width: 100%;
     padding: 15px 0;
     font-family: 'Ubuntu', sans-serif ;
+    transition: all 1s ease;
+}
+
+.navbar.sticky{
+    padding: 15px 0;
+    background: lime;
+    opacity: 0.5;
 }
 
 .navbar .max-width{
@@ -32,7 +39,7 @@
 }
 
 .navbar .logo a{
-    color:#fff;
+    color:#000;
     font-size: 35px;
     font-weight: 600;
 }
